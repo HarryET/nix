@@ -62,6 +62,7 @@
       jack.enable = true;
     };
     flatpak.enable = true;
+    tailscale.enable = true;
   };
 
   nix = {

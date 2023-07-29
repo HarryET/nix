@@ -18,5 +18,21 @@
 
   services = {
     fprintd.enable = true;
+    mullvad-vpn.enable = true;
+  };
+
+  programs.git.config = {
+    user = {
+      signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDsE2lHKw2w+zqjFLS/HrSdY07nOSRyIyG1ApzB6V91P";
+    };
+
+    gpg = {
+      format = "ssh";
+      program = "${pkgs._1password-gui}/share/1password/op-ssh-sign";
+    };
+
+    commit = {
+      gpgsign = false;
+    };
   };
 }
