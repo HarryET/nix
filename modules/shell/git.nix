@@ -15,7 +15,7 @@
         name = custom.full-name;
         email = custom.email;
       };
-      credential.helper = "${pkgs.gh} auth git-credential";
+      # credential.helper = "${pkgs.gh} auth git-credential";
     };
   };
 }
